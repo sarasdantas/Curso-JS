@@ -1,23 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Script</title>
     <style>
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 20px;
             background-color: pink;
         
         }
+
     </style>
+
 </head>
+
+
 <body>
+
     <script>
         var nome = window.prompt('Qual seu nome?');
         document.write(`Olá, ${nome}. Seu nome tem ${nome.length} letras. `)
         document.write(`E seu nome em maiúsculas é ${nome.toUpperCase()}`)
     </script>
+
 </body>
+
 </html>
+
+<!--
+                    Operadores
+
+    -Aritméticos:
+        Soma: +
+        Subtração: -
+        Multiplicação: *
+        Divisão: / (para números reais)
+        Resto: % (da divisão inteira)
+        Potência: **
+
+      Ordem de precedência:
+       ()
+       **
+       * / %
+       + - 
+      Para guardar o resultado das operações, basta declarar uma variável:
+       Ex: var x = a+b;
+       
+    -Atribuição:
+        Soma: +=
+        Subtração: -=
+        Multiplicação: *=
+        Divisão: /=
+        Resto: %=
+        Potência: **=
+
+    -Relacionais: O valor sempre será booleano, ou seja true or false
+        Maior que: >
+        Menor que: <
+        Maior que ou igual a: >=
+        Menor que ou igual a: <=
+        Igual: ==
+        Não igual: !=
+        Igualmente igual: === (grandeza e valor)
+        Desigual restrito: !== (grandeza e valor)
+    
+    -Lógicos:
+        Negação: !
+        Conjunção "e": &&
+        Disjunção "ou": ||
+      Ordem de precedência: !, && e ||  
+
+      Se houver uma expressão contendo os três tipode de operadores acima, a ordem de 
+      precedência será: Aritméticos, relacionais e formal  
+
+    -Ternários:
+        Se sim: ?
+        Se não: :
+-->
