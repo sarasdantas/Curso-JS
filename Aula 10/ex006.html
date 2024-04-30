@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background: radial-gradient(blue,darkblue);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="area"> <!--onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" -- Defino o evento e o nome dele para fazer uma function no JS-->
+        Interaja...
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area') //Aqui declaramos que a variável a é o conteúdo da <div>
+
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        //Ou podemos fazer essa "nomeação" de eventos pelo próprio JS
+
+        function clicar() { //Chamo a função e o nome do evento que defini na <div>
+            a.innerText = 'Clicou!' //Defino uma alteração para realizar na var a quando o onclick for acionado
+            a.style.background = 'radial-gradient(orange, red)'
+        }
+
+        function entrar() {
+            a.innerText = 'Entrou!'
+            a.style.background = 'radial-gradient(blue,darkblue)'
+        }
+
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'radial-gradient(blue,darkblue)'
+        }
+    </script>
+</body>
+</html>
