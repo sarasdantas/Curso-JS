@@ -21,7 +21,10 @@
 
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
+
+        
 
         h1 {
             font-family: "Comfortaa", sans-serif;            
@@ -38,9 +41,53 @@
             font-family: "Comfortaa", sans-serif;  
             font-weight: 600;
             font-size: 18px;
+
+            margin-bottom: 5%;
+            line-height: 1.5;
         }
 
+        input#nome {
+            border: none;
+            outline: none;
 
+            font-family: "Comfortaa", sans-serif;  
+            font-weight: 500;
+            font-size: 16px;
+
+            padding: 1px 5px;
+            border-radius: 5px;
+        }
+
+        input#nacionalidade {
+            border: none;
+            outline: none;
+
+            font-family: "Comfortaa", sans-serif;  
+            font-weight: 500;
+            font-size: 16px;
+
+            padding: 1px 5px;
+            border-radius: 5px;
+        }
+
+        input#botao {
+            width: 25%;
+            height: 25px;
+
+            font-family: "Comfortaa", sans-serif;  
+            font-weight: 500;
+            font-size: 16px;
+            
+            background-color: #67917a;
+
+            border: none;
+            border-radius: 5px;
+            padding: 1px 0;
+        }
+
+        input#botao:hover {
+            background-color: #789686;
+        }
 
     </style>
 
@@ -50,7 +97,7 @@
     <h1>Sistema Imigratório do Brasil</h1>
     <p>Olá, me chamo <input type="text" name="nome" id="nome" required> e sou
     <input type="text" name="nacionalidade" id="nacionalidade" required></p>
-    <input type="button" value="Verificar" onclick="calcular()">
+    <input type="button" value="Verificar" onclick="calcular()" id="botao">
     <div id="res">
 
     </div>
@@ -62,9 +109,9 @@
             var res = window.document.querySelector('div#res')
             
             if (nac == 'brasileira' || 'brasileiro') {
-                res.innerText = `<p>Olá senhor(a) ${nome}, vimos aqui que a senhora é ${nac}.</p>`
+                res.innerHTML = `<p>Olá senhor(a) ${nome}, vimos aqui que a senhora é ${nac}.</p>`
             } else {
-                res.innerText = `<p>Olá senhor(a) ${nome}, vimos aqui que a senhora é estrangeiro(a).</p>`
+                res.innerHTML = `<p>Olá senhor(a) ${nome}, vimos aqui que a senhora é estrangeiro(a).</p>`
             }
         }
     </script>
