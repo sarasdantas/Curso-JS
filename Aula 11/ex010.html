@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro<input type="number" name="txtvel" id="txtvel"> km/h
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function calcular() { // Crio uma função com a ação que descrevi no evento em HTML
+            var txtv = window.document.getElementById('txtvel') // Defino o valor da var
+            var res = window.document.querySelector('div#res') // Var que terá o resultado
+            var vel = Number(txtv.value) // Crio uma var, alterando o tipo de var da txtv
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel} km/h</strong>.</p>` // Frase que irá aparecer quando a function for concluída
+
+            if (vel > 60)/* Aqui vai o 'centro' da condição */ { 
+                res.innerHTML = '<p>Você foi <strong>MULTADO</strong> por excesso de velocidade.</p>'
+            } // A mensagem acima aparecerá caso o 'centro' da condição aconteça
+
+            res.innerHTML += '<p>Dirija sempre com cinto de segurança!</p>'
+        }
+    </script>
+</body>
+</html>
