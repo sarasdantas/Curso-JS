@@ -105,10 +105,10 @@
     <script>
         function calcular() {
             var nome = window.document.getElementbyId('nome')
-            var nac = window.document.querySelector('input#nacionalidade')
-            var res = window.document.querySelector('div#res')
+            var nac = window.document.getElementById('nacionalidade')
+            var res = window.document.getElementById('res')
             
-            if (nac == 'brasileira' || 'brasileiro') {
+            if (nac == 'brasileira' || nac == 'brasileiro') {
                 res.innerHTML = `<p>Olá senhor(a) ${nome}, vimos aqui que a senhora é ${nac}.</p>`
             } else {
                 res.innerHTML = `<p>Olá senhor(a) ${nome}, vimos aqui que a senhora é estrangeiro(a).</p>`
