@@ -9,7 +9,7 @@
 
 <body>
     <header>
-        <h1>Verificdor de Idade</h1>
+        <h1>Verificador de Idade</h1>
     </header>
 
     <section>
@@ -18,19 +18,19 @@
                 <input type="number" name="txtano" id="txtano" min="0">
             </p>
             <p>Sexo
-                <input type="radio" name="radsex" id="mas">
+                <input type="radio" name="radsex" id="mas"> <!-- O name das tags radio input são iguais para que somente uma seja selecionada -->
                 <label for="mas">Masculino</label>
                 <input type="radio" name="radsex" id="fem">
                 <label for="fem">Feminino</label>
             </p>
             <p>
-                <input type="button" value="verificar">
+                <input type="button" value="verificar" onclick="verificar()">
             </p>
             
         </div>
 
         <div id="res">
-        
+            Preencha os dados acima para ver o resultado!        
         </div>
     </section>
 
