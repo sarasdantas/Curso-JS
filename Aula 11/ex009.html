@@ -95,23 +95,25 @@
 
 <body>
     <h1>Sistema Imigratório do Brasil</h1>
-    <p>Olá, me chamo <input type="text" name="nome" id="nome" required> e sou
-    <input type="text" name="nacionalidade" id="nacionalidade" required></p>
+
+    <p>Olá, me chamo <input type="text" name="nome" id="nome"> e sou
+    <input type="text" name="nacionalidade" id="nacionalidade"></p>
+
     <input type="button" value="Verificar" onclick="calcular()" id="botao">
+
     <div id="res">
 
     </div>
 
     <script>
         function calcular() {
-            var nome = window.document.getElementbyId('nome')
+            var nome = window.document.getElementById('nome')
             var nac = window.document.getElementById('nacionalidade')
             var res = window.document.getElementById('res')
-            
-            if (nac == 'brasileira' || nac == 'brasileiro') {
-                res.innerHTML = `<p>Olá senhor(a) ${nome}, vimos aqui que a senhora é ${nac}.</p>`
+            if (nac.value == 'brasileira' || nac.value == 'brasilero'|| nac.value == 'Brasileira' || nac.value == 'Brasilero') {
+                res.innerHTML = `<p>Olá ${nome.value}, vimos que você é ${nac.value}</p>`
             } else {
-                res.innerHTML = `<p>Olá senhor(a) ${nome}, vimos aqui que a senhora é estrangeiro(a).</p>`
+                res.innerHTML = `<p>Olá ${nome.value}, vimos que você é estrangeiro(a).</p>`
             }
         }
     </script>
