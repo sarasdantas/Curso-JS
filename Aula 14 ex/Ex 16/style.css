@@ -19,6 +19,34 @@ section {
     width: 500px;
 }
 
+input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 200px;
+}
+
+.botao{
+    border: none;
+    border-radius: 5px;
+    box-shadow: 3px 4px 10px rgb(99, 98, 98);
+
+    height: 25px;
+
+    background-color: rgb(241, 107, 107);
+    color: white;
+    font-size: 18px;
+}
+
+.botao:hover {
+    background-color: rgb(168, 75, 75);
+}
+
+#botao {
+    display: flex;
+    justify-content: center;
+}
+
 footer {
     color: white;
     text-align: center;
