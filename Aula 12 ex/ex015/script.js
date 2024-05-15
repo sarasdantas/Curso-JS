@@ -9,6 +9,8 @@ function verificar() {
         var fsex = document.getElementsByName('radsex') // definindo variável
         var idade = ano - Number(fano.value) // definindo variável
         var genero = ''
+
+        
         var img = document.createElement('img') // Definindo variável e criando uma tag <img> no HTML
         img.setAttribute('id', 'foto') // Irá atribuir um id="foto" à tag <img> (<img id="foto">)
         if (fsex[0].checked) { //if else para a var genero
