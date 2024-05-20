@@ -44,18 +44,36 @@ function adicionar(){
 }
 
 function finalizar(){
-    valores.sort()
-    if(valores == 0){
+    
+    if(valores.length == 0){
         window.alert('Adcione valores antes de finalizar')
     } else {
-        valores.sort()
-        
+        let tot = valores.length
+        let maior = valores[0]
+        let menor = valores[0]
+        // maior e menor são 0 para definir em for
+        let soma = 0
+        let media = 0
+
+        for(let pos in valores){
+            soma += valores[pos]
+            if(valores[pos]>maior)
+                maior = valores[pos]
+            // se o valor da posição for maior, a let maior será a posição
+            
+            if(valores[pos]<menor)
+                menor = valores[pos]
+            // se o valor da posição for menor, a let menor será a posição
+        }
+
+        media = soma/tot
+
         res.innerHTML = ''
-        res.innerHTML += `<p>Ao todo, temos ${valores.length} números cadastrados.<p>`
-        res.innerHTML += `<p>O menor número informado foi ${valores[0]}<p>`
-        valores.sort()
-        res.innerHTML += `<p>O maior número informado é ${valores[valores.length - 1]}<p>`
-        valores.sort()
+        res.innerHTML += `<p>Ao todo, temos ${tot} números cadastrados.<p>`
+        res.innerHTML += `<p>O maior número informado foi ${maior}<p>`
+        res.innerHTML += `<p>O menor número informado foi ${menor}<p>`
+        res.innerHTML += `<p>Somando todos os valores, temos ${soma}</p>`
+        res.innerHTML += `<p>A média dos valores digitados é ${media}</p>`    
         
         //FAZER DO JEITO DELE APAGUE
     }
